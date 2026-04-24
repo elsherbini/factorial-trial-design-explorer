@@ -18,6 +18,7 @@ export interface ComparisonSummary {
 export interface ScenarioResult {
   baselineSuccesses: number;
   comparisons: ComparisonSummary[];
+  posteriorSamples: PosteriorSamples;
 }
 
 function quantile(arr: number[], q: number): number {
@@ -92,7 +93,8 @@ export function runScenario(
   const samples = sampleFn({ n, s, priorMeans, priorSds });
   return {
     baselineSuccesses,
-    comparisons: summarizePosterior(samples)
+    comparisons: summarizePosterior(samples),
+    posteriorSamples: samples
   };
 }
 

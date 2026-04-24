@@ -2,6 +2,7 @@
   import Sidebar from '$lib/components/Sidebar.svelte';
   import ScenarioCard from '$lib/components/ScenarioCard.svelte';
   import ViolinPanel from '$lib/components/ViolinPanel.svelte';
+  import PosteriorPanel from '$lib/components/PosteriorPanel.svelte';
   import { appState } from '$lib/state.svelte';
 </script>
 
@@ -69,5 +70,7 @@
         </li>
       </ol>
     </div>
+
+    <PosteriorPanel results={appState.results} />
   </main>
 </div>
