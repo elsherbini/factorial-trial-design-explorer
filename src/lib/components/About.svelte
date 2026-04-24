@@ -2,7 +2,31 @@
   <h2 class="text-2xl font-bold">About</h2>
 
   <h3 class="text-lg font-semibold">Model</h3>
-  <p>This app fits a Bayesian logistic regression to a 2&times;2 factorial trial with a binary outcome (success/failure). The four arms are:</p>
+  <p>This app fits a Bayesian logistic regression to a 2&times;2 factorial trial with a binary outcome (success/failure).</p>
+
+  <table class="w-full text-sm border-collapse border border-gray-300 my-4">
+    <thead>
+      <tr>
+        <th class="border border-gray-300 bg-gray-100 p-2"></th>
+        <th class="border border-gray-300 bg-gray-100 p-2">No Standard Care</th>
+        <th class="border border-gray-300 bg-gray-100 p-2">Standard Care</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="border border-gray-300 bg-gray-100 p-2 text-left">No Treatment</th>
+        <td class="border border-gray-300 p-2 text-center"><strong>ABX alone</strong><br/><span class="text-xs text-gray-500">antibiotics only (control)</span></td>
+        <td class="border border-gray-300 p-2 text-center"><strong>Standard + ABX</strong><br/><span class="text-xs text-gray-500">standard care + antibiotics</span></td>
+      </tr>
+      <tr>
+        <th class="border border-gray-300 bg-gray-100 p-2 text-left">Treatment</th>
+        <td class="border border-gray-300 p-2 text-center"><strong>Treatment + ABX</strong><br/><span class="text-xs text-gray-500">new treatment + antibiotics</span></td>
+        <td class="border border-gray-300 p-2 text-center"><strong>Std + Trt + ABX</strong><br/><span class="text-xs text-gray-500">both + antibiotics</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The four arms are:</p>
   <ol class="list-decimal ml-6 space-y-1">
     <li><strong>ABX alone</strong> &mdash; antibiotics only (control)</li>
     <li><strong>Standard + ABX</strong> &mdash; standard care plus antibiotics</li>

@@ -5,7 +5,34 @@
 </script>
 
 <aside class="w-96 shrink-0 overflow-y-auto border-r border-gray-200 bg-gray-50 p-4 space-y-4">
-  <h2 class="text-lg font-semibold">Observed Data</h2>
+  <table class="w-full text-[10px] border-collapse border border-gray-300 mb-2">
+    <thead>
+      <tr>
+        <th class="border border-gray-300 bg-gray-100 p-1"></th>
+        <th class="border border-gray-300 bg-gray-100 p-1">No Standard Care</th>
+        <th class="border border-gray-300 bg-gray-100 p-1">Standard Care</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="border border-gray-300 bg-gray-100 p-1 text-left">No Treatment</th>
+        <td class="border border-gray-300 p-1 text-center">ABX alone</td>
+        <td class="border border-gray-300 p-1 text-center">Standard + ABX</td>
+      </tr>
+      <tr>
+        <th class="border border-gray-300 bg-gray-100 p-1 text-left">Treatment</th>
+        <td class="border border-gray-300 p-1 text-center">Treatment + ABX</td>
+        <td class="border border-gray-300 p-1 text-center">Std + Trt + ABX</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="text-xs text-gray-500 leading-relaxed">
+    This tool fits a Bayesian logistic regression to this 2&times;2 factorial trial (standard care &times; treatment), letting you explore posterior effect sizes across different baseline success rates. See the <button class="underline text-blue-600 hover:text-blue-800" onclick={() => { const btn = document.querySelector('nav button:nth-child(3)') as HTMLElement; btn?.click(); }}>About</button> tab for model details.
+  </p>
+
+  <hr class="border-gray-300" />
+
+  <h2 class="text-lg font-semibold">Set Observed Data</h2>
   <table class="w-full text-xs border-collapse">
     <thead>
       <tr class="border-b border-gray-300">
@@ -118,10 +145,4 @@
       </label>
     {/each}
   </fieldset>
-
-  <hr class="border-gray-300" />
-
-  <p class="text-xs text-gray-500 leading-relaxed">
-    This tool fits a Bayesian logistic regression to a 2&times;2 factorial trial (standard care &times; treatment), letting you explore posterior effect sizes across different baseline success rates. See the <button class="underline text-blue-600 hover:text-blue-800" onclick={() => { const btn = document.querySelector('nav button:nth-child(3)') as HTMLElement; btn?.click(); }}>About</button> tab for model details.
-  </p>
 </aside>

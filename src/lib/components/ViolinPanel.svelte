@@ -69,7 +69,7 @@
           ...computeStats(r.comparisons[0].arrSamples)
         })),
         yDomain: computeYDomain(validResults.map((r) => r.comparisons[0].arrSamples)),
-        yLabel: 'ARR'
+        yLabel: 'Absolute Risk Reduction (ARR)'
       },
       {
         label: 'Std+Trt+ABX\nvs Standard+ABX',
@@ -82,7 +82,7 @@
           ...computeStats(r.comparisons[1].arrSamples)
         })),
         yDomain: computeYDomain(validResults.map((r) => r.comparisons[1].arrSamples)),
-        yLabel: 'ARR'
+        yLabel: 'Absolute Risk Reduction (ARR)'
       },
       {
         label: 'Drug synergy\n(b3 posterior)',
